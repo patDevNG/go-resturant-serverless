@@ -126,4 +126,53 @@ functions:
     events:
       - http:
           path: /order
-          method: post          
+          method: post  
+  getOrder:
+    handler: bin/order/getOrder
+    events:
+      - http:
+          path: /order/{orderId}
+          method: get 
+
+  getOrders:
+    handler: bin/order/getOrders
+    events:
+      - http:
+          path: /order
+          method: get    
+  createOrderItem:
+    handler: bin/orderItem/createOrderItem
+    events:
+      - http:
+          path: /orderItem
+          method: post 
+  getOrderItem:
+    handler: bin/orderItem/getOrderItem
+    events:
+      - http:
+          path: /orderItem/{orderItemId}
+          method: get   
+  getOrderItems:
+    handler: bin/orderItem/getOrderItems
+    events:
+      - http:
+          path: /orderItem
+          method: get 
+  createInvoice:
+    handler: bin/invoice/createInvoice
+    events:
+      - http:
+          path: /invoice
+          method: post 
+  getInvoice:
+    handler: bin/invoice/getInvoice
+    events:
+      - http:
+          path: /invoice/{invoiceId}
+          method: get          
+  getInvoices:
+    handler: bin/invoice/getInvoices
+    events:
+      - http:
+          path: /invoice
+          method: get
